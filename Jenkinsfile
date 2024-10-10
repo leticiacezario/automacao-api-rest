@@ -10,6 +10,7 @@ pipeline {
         }
         stage('Test') {
             steps {
+            bat 'npm start' 
                bat '''set NO_COLOR=1
                 npm test'''
                 bat 'npm run cypress:open'
